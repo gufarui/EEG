@@ -1,0 +1,14 @@
+Subject: 28
+Conditions present in epochs: 
+  high_win: n=92
+  high_loss: n=52
+  mid_win: n=94
+  mid_loss: n=48
+  low_win: n=77
+  low_loss: n=67
+Figures:
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m2_continuous_28.png
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m2_psd_28.png
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m2_ica_components_28.png
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m2_events_28.png
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m2_evoked_fcz_28.png

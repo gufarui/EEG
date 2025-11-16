@@ -1,0 +1,11 @@
+Subject: 28
+Event counts (feedback only):
+  high_loss: 52
+  high_win: 92
+  low_loss: 67
+  low_win: 77
+  mid_loss: 48
+  mid_win: 94
+Figures:
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m1_continuous_28.png
+  /Users/gufang/Desktop/Uni/2st semester/EEG/pro/figures/m1_events_28.png
