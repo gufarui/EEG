@@ -18,7 +18,9 @@ htmlcov/
 coverage.xml
 
 # Project outputs
+# Ignore derivatives/ except HTML files
 derivatives/
+!derivatives/**/*.html
 docs/milestones/*/slides/
 
 # Data directories to ignore
