@@ -5,8 +5,8 @@
 - 已安装 `mne-bids-pipeline`：`pip install mne-bids-pipeline`
 
 运行：
-- `mne_bids_pipeline run --config pipeline/config.py --n_jobs 1`
-  - 或：`python -m mne_bids_pipeline run --config pipeline/config.py --n_jobs 1`
+- `mne_bids_pipeline --config pipeline/config.py --n_jobs 1`
+  - 或：`python -m mne_bids_pipeline.run --config pipeline/config.py --n_jobs 1`
 
 输出：
 - 派生结果与 HTML 报告位于 `derivatives/mne-bids-pipeline/`

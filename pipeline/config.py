@@ -20,16 +20,18 @@ l_freq = 0.1
 h_freq = 30.0
 notch_freq = 50.0
 
-# 事件到条件的映射：合并高/中/低 × 赢/输 的反馈事件
-# 使用 BIDS 注释中的 “value” 字段（BrainVision S-codes）
-conditions = {
-    'low_win':    ['Stimulus/S  6'],
-    'low_loss':   ['Stimulus/S  7'],
-    'mid_win':    ['Stimulus/S 16', 'Stimulus/S 26'],
-    'mid_loss':   ['Stimulus/S 17', 'Stimulus/S 27'],
-    'high_win':   ['Stimulus/S 36'],
-    'high_loss':  ['Stimulus/S 37'],
-}
+# 事件到条件（本版本 pipeline 更稳妥的写法：直接列出数据中存在的事件名列表）
+# 注意保留空格：单数字为 'S  6'、'S  7'，两位数为 'S 16' 等。
+conditions = [
+    'Stimulus/S  6',  # low win
+    'Stimulus/S  7',  # low loss
+    'Stimulus/S 16',  # mid low-cue win
+    'Stimulus/S 17',  # mid low-cue loss
+    'Stimulus/S 26',  # mid high-cue win
+    'Stimulus/S 27',  # mid high-cue loss
+    'Stimulus/S 36',  # high win
+    'Stimulus/S 37',  # high loss
+]
 
 # Epoch 参数（反馈锁定）
 epochs_tmin = -0.2
@@ -41,8 +43,9 @@ ica = True
 ica_algorithm = 'fastica'  # 可改为 'picard' 或 'infomax'（需额外依赖）
 ica_n_components = 15
 
-# 报告
+# 报告与并行
 reports_gen_figures = True
-parallel = False
-N_JOBS = 1
-
+# mne-bids-pipeline 新版不再支持变量 `parallel`，请使用 `parallel_backend`。
+# 常见取值：'loky'（默认）、'threading'、'multiprocessing'。保持 'loky' 并用 CLI 的 --n_jobs 控制并行数。
+parallel_backend = 'loky'
+# 注意：不要在配置中设置 N_JOBS（已在新版移除）。如需并行，请使用命令行参数 `--n_jobs`。

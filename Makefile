@@ -16,5 +16,4 @@ m12: m1 m2
 
 # 运行 mne-bids-pipeline（可选，生成派生与 HTML 报告）
 pipeline:
-	python -m mne_bids_pipeline run --config pipeline/config.py --n_jobs 1
-
+	mne_bids_pipeline --config pipeline/config.py --n_jobs 1
