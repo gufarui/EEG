@@ -1,0 +1,13 @@
+mne>=1.5
+mne-bids>=0.12
+mne-icalabel>=0.5
+autoreject>=0.4
+statsmodels>=0.14
+seaborn>=0.13
+matplotlib>=3.7
+pandas>=2.0
+numpy>=1.23
+scipy>=1.10
+jupyterlab>=4
+pyyaml>=6
+rich>=13

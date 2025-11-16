@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Build/Reports
+dist/
+build/
+htmlcov/
+coverage.xml
+
+# Project outputs
+figures/
+results/
+data/processed/
+derivatives/
+docs/milestones/*/slides/
+
+# Data directories to ignore
+原/
+data/raw/ds004147/
+
+# MNE/cache
+MNE-*/
+*.fif
+*.set
+*.edf
+*.vhdr
+*.vmrk
+*.eeg
+
+# Local envs
+.env
+.venv/
+venv/
